@@ -87,7 +87,12 @@ img {
     width: 290px;
     padding: 10px;
     margin: 15px;
+    font-size: 19px;
 
+}
+
+.menuCard:hover{
+    background-color: #b1a7ce;
 }
 
 .footer {
@@ -134,7 +139,6 @@ img {
     overflow: hidden;
     width: 100%;
     text-overflow: ellipsis;
-    font-size: 20px;
     margin-top: 10px;
 }
 
