@@ -83,8 +83,8 @@ img {
 .menuCard {
     background-color: lightsteelblue;
 
-    height: 230px;
-    width: 230px;
+    height: 290px;
+    width: 290px;
     padding: 10px;
     margin: 15px;
 
@@ -123,16 +123,19 @@ img {
 .sidenav a {
     padding: 10px 10px 10px 10px;
     text-decoration: none;
-    font-size: 27px;
+    font-size: 20px;
     color: black;
 }
+
 .description {
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
     text-overflow: ellipsis;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .infos{
