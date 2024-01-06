@@ -28,13 +28,17 @@
     text-align: center;
 }
 
-#burgerMenu{
+.burgerMenu{
     left: 0;
     height: 50px;
     width: 50px;
     min-height: 50px;
     min-width: 50px;
     background-color: darkcyan;
+}
+.sidenav .burgerMenu {
+    margin-top: 29px;
+    margin-left: 25px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -95,4 +99,48 @@ img {
     background-color: #1abc9c;
     color: white;
     text-align: center;
+}
+
+
+
+/* The sidebar menu */
+.sidenav {
+    height: auto; /* Full-height: remove this if you want "auto" height */
+    min-width: 350px;
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background: #81b9b9;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    position: absolute;
+    margin-left: 8px;
+    margin-top:  8px;
+    display: none;
+    text-align: center;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-size: 27px;
+    color: black;
+}
+
+.navMenu {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
