@@ -1,5 +1,99 @@
 
+.header {
+    padding: 5px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 20px;
+    display:flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: left;
+}
 
-p {
-    color: blueviolet;
+
+.Options{
+    display:flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+}
+
+.hOption{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+#burgerMenu{
+    left: 0;
+    height: 50px;
+    width: 50px;
+    min-height: 50px;
+    min-width: 50px;
+    background-color: darkcyan;
+}
+
+@media only screen and (max-width: 1000px) {
+    #price{
+        display: none;
+    }
+
+    #weekday{
+        display: none;
+    }
+
+    #language{
+        display: none;
+    }
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#location{
+
+}
+
+.menus {
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
+.content {
+    margin-bottom: 100px;
+}
+
+
+.menuCard {
+    background-color: lightsteelblue;
+
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    margin: 15px;
+
+}
+
+.footer {
+    padding: 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1abc9c;
+    color: white;
+    text-align: center;
 }
