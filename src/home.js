@@ -12,6 +12,7 @@ menuCards.forEach(function(menuCard) {
         let targetElement = event.currentTarget;
         let card = document.querySelector("#" + targetElement.id);
         let img = document.querySelector("#" + targetElement.id + " img");
+        let description = document.querySelector("#" + targetElement.id + " .description");
 
         let values = "Kohlenhydrate:  1000kcal \n Zucker: 10g \n Salz: 20g \n Fett: 5g";
 
@@ -22,9 +23,11 @@ menuCards.forEach(function(menuCard) {
             const p = document.createElement('p');
             p.innerText = values;
             card.appendChild(p);
+            description.style.whiteSpace = "wrap";
 
         }else{
             img.style.display = "block";
+            description.style.whiteSpace = "nowrap";
             const p =  document.querySelector("#" + targetElement.id + " p");
             p.remove();
         }
