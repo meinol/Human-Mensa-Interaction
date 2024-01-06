@@ -107,7 +107,6 @@ img {
 }
 
 
-
 /* The sidebar menu */
 .sidenav {
     height: auto; /* Full-height: remove this if you want "auto" height */
@@ -159,11 +158,11 @@ img {
     flex-direction: column;
     padding-bottom: 20px;
     padding-top: 30px;
+    font-size: 20px;
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
+.navMenu div {
+    margin: 5px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
