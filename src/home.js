@@ -46,6 +46,40 @@ function removeSidebar(){
     sidebar.style.display = "none";
 }
 
+/* filter allergen */
+
+let allergens = document.querySelectorAll(".container input");
+
+allergens.forEach( function(allergen){
+
+    allergen.addEventListener("change", function filterAllergene(event){
+        let menucards = document.querySelectorAll(".menuCard");
+
+        if (this.checked) {
+            menucards.forEach(function(menucard){
+                let allergy = menucard.getAttribute("allergen");
+
+                if(allergy.includes(allergen.id)){
+                    menucard.style.display = "none";
+                }
+            });
+        } else {
+
+            menucards.forEach(function(menucard){
+                let allergy = menucard.getAttribute("allergen");
+
+                if(allergy.includes(allergen.id)){
+                    menucard.style.display = "block";
+                }
+            });
+
+        }
+    });
+});
+
+
+
+
 
 /* select weekday */
 

@@ -58,25 +58,41 @@
             <div id="Allergene">
 
                 <label class="container">Krustentiere
-                    <input type="checkbox" checked="checked">
+                    <input id="krustentiere" type="checkbox">
                     <span class="checkmark"></span>
                 </label>
 
                 <label class="container">Nüsse
-                    <input type="checkbox">
+                    <input id="nuesse" type="checkbox">
                     <span class="checkmark"></span>
                 </label>
 
                 <label class="container">Fleisch
-                    <input type="checkbox">
+                    <input id="fleisch" type="checkbox">
                     <span class="checkmark"></span>
                 </label>
 
                 <label class="container"> Tomaten
-                    <input type="checkbox">
+                    <input id="tomaten" type="checkbox">
                     <span class="checkmark"></span>
                 </label>
             </div>
+
+            <div >Vegetarisch/Vegan:</div>
+
+            <div id="veggie">
+
+                <label class="container">Vegetarisch
+                    <input id="vegetarisch" type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container"> Vegan
+                    <input id="vegan" type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
             <div >Mehr Optionen</div>
         </div>
     </div>
@@ -85,7 +101,7 @@
 
         <div class="menus">
 
-            <div class="menuCard" id="seelachs">
+            <div class="menuCard" id="seelachs" allergen="tomaten,vegetarisch,vegan">
                 <img src="images/seelachs.png">
                 <div class="description"> Seelachs mit Kartoffel, Tomaten und Rosmarin </div>
 
@@ -95,7 +111,7 @@
                 </div>
             </div>
 
-            <div class="menuCard" id="curry">
+            <div class="menuCard" id="curry" allergen="fleisch,vegetarisch,vegan">
                 <img src="images/curry.png">
                 <div class="description"> Curry mit Reis</div>
 
@@ -105,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="menuCard" id="pizza">
+            <div class="menuCard" id="pizza" allergen="tomaten,vegan">
                 <img src="images/pizza.png">
                 <div class="description"> Pizza Tomate Mozzarella</div>
 
@@ -115,7 +131,7 @@
                 </div>
             </div>
 
-            <div class="menuCard" id="veganpatty">
+            <div class="menuCard" id="veganpatty" allergen="tomaten">
                 <img src="images/veganpatty.png">
                 <div class="description"> Veganpatty mit Linsen und Tomate</div>
 
@@ -126,7 +142,7 @@
 
             </div>
 
-            <div class="menuCard" id="salat">
+            <div class="menuCard" id="salat" allergen="tomaten,nuesse,krustentiere,vegetarisch,vegan">
                 <img src="images/salat.png">
                 <div class="description"> Salat mit Garnelen, Tomaten und Avocado</div>
 
@@ -136,7 +152,7 @@
                 </div>
             </div>
 
-            <div class="menuCard" id="baguette">
+            <div class="menuCard" id="baguette" allergen="fleisch,tomaten,vegetarisch,vegan">
                 <img src="images/sandwitch.png">
                 <div class="description"> belegtes Baguette mit Bacon</div>
 
@@ -146,7 +162,7 @@
                 </div>
             </div>
 
-            <div class="menuCard" id="torte">
+            <div class="menuCard" id="torte" allergen="nuesse,vegan">
                 <img src="images/dessert.png">
                 <div class="description"> Törtchen mit Schokolade</div>
 
@@ -157,7 +173,7 @@
             </div>
 
 
-            <div class="menuCard" id="donut">
+            <div class="menuCard" id="donut" allergen="vegan">
                 <img src="images/donut.png">
                 <div class="description"> Schokoladendonut</div>
 
@@ -167,7 +183,7 @@
                 </div>
             </div>
 
-            <div class="menuCard" id="schokokuss">
+            <div class="menuCard" id="schokokuss" allergen="vegan">
                 <img src="images/schokokuss.png">
                 <div class="description"> Schokokussbrötchen</div>
 
@@ -177,7 +193,7 @@
                 </div>
             </div>
 
-            <div class="menuCard" id="apfelschorle">
+            <div class="menuCard" id="apfelschorle" allergen="">
                 <img src="images/apfelschorle.png">
                 <div class="description"> Apfelschorle</div>
 
@@ -187,7 +203,7 @@
                 </div>
             </div>
 
-            <div class="menuCard" id="schokolade">
+            <div class="menuCard" id="schokolade" allergen="vegan">
                 <img src="images/kakao.png">
                 <div class="description"> heiße Schokolade</div>
 
@@ -197,7 +213,7 @@
                 </div>
             </div>
 
-            <div class="menuCard" id="kaffee">
+            <div class="menuCard" id="kaffee" allergen="">
                 <img src="images/espresso.png">
                 <div class="description"> Espresso</div>
 
