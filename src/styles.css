@@ -109,7 +109,7 @@ img {
 /* The sidebar menu */
 .sidenav {
     height: auto; /* Full-height: remove this if you want "auto" height */
-    min-width: 350px;
+    min-width: 300px;
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
