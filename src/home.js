@@ -46,9 +46,13 @@ var handlers = {
 function updateSplit(response) {
     if(response.split === "true"){
         document.querySelector('.split-right').style.display = 'block';
+        document.getElementById('price').style.display = 'none';
+        document.getElementById('price_r').style.display = 'none';
     }
     else {
         document.querySelector('.split-right').style.display = 'none';
+        document.getElementById('price').style.display = 'block';
+        
     }
     
 }
