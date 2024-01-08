@@ -1,8 +1,67 @@
+var loginname = 'admin'
+var loginpass = 'admin'
+
+var request = new XMLHttpRequest();
+
+request.onreadystatechange = function() {
+    // console.log("onreadystatechange: " + request.readyState + ", " +  request.status);
+    // console.log(request.responseText);
+    if (request.readyState == 4) {
+        if (request.status == 200) {
+            var response = JSON.parse(request.responseText);
+            handlers[response._id](response);
+        }
+        if (request.status == 404) {
+            console.log("not found: " + request.responseText);
+        }
+    }
+};
+
+function get(variable) {
+    // console.log("get " + variable);
+    request.open("GET", dburl + variable, false);
+	request.setRequestHeader("Authorization", "Basic " + btoa(loginname + ":" + loginpass));
+    request.send();
+}
+
+function update() {
+    for (var name in handlers) {
+        // console.log("updating " + name);
+        get(name);
+    }
+}
+
+// request updates at a fixed interval (ms)
+var intervalID = setInterval(update, 1000);
+
+///////////////////////////////////////////////////////////////////////////////
+// your code below
+
+var dbname = "hmi";
+var dburl = "http://127.0.0.1:5984/" + dbname + "/";
+var handlers = {
+    "split" : updateSplit,
+};
+
+function updateSplit(response) {
+    if(response.split === "true"){
+        document.querySelector('.split-right').style.display = 'block';
+        console.log("true");
+    }
+    else {
+        document.querySelector('.split-right').style.display = 'none';
+        console.log("false");
+    }
+    
+}
 
 
 
 document.getElementById("burger1").addEventListener("click", addSidebar);
 document.getElementById("burger2").addEventListener("click", removeSidebar);
+document.getElementById("burger1_r").addEventListener("click", addSidebar_r);
+document.getElementById("burger2_r").addEventListener("click", removeSidebar_r);
+
 
 let menuCards = document.querySelectorAll(".menuCard");
 
@@ -42,19 +101,60 @@ function addSidebar(){
 
 function removeSidebar(){
     let sidebar = document.getElementById("sidebar");
+    document.querySelector('.split-right').style.display = "block";
+    sidebar.style.display = "none";
+}
 
+function addSidebar_r(){
+    let sidebar = document.getElementById("sidebar_r");
+
+    sidebar.style.display = "block";
+}
+
+function removeSidebar_r(){
+    let sidebar = document.getElementById("sidebar_r");
+    document.querySelector('.split-right').style.display = "none";
     sidebar.style.display = "none";
 }
 
 /* filter allergen */
 
-let allergens = document.querySelectorAll(".container input");
+let allergens_L = document.querySelectorAll(".split-left .container input");
 
-allergens.forEach( function(allergen){
+allergens_L.forEach( function(allergen){
 
     allergen.addEventListener("change", function filterAllergene(event){
-        let menucards = document.querySelectorAll(".menuCard");
+        let menucards = document.querySelectorAll(".split-left .menuCard");
+        if (this.checked) {
+            menucards.forEach(function(menucard){
+                let allergy = menucard.getAttribute("allergen");
 
+                if(allergy.includes(allergen.id)){
+                    menucard.style.display = "none";
+                }
+            });
+        } else {
+
+            menucards.forEach(function(menucard){
+                let allergy = menucard.getAttribute("allergen");
+
+                if(allergy.includes(allergen.id)){
+                    menucard.style.display = "block";
+                }
+            });
+
+        }
+    });
+    
+});
+
+
+let allergens_R = document.querySelectorAll(".split-right .container input");
+
+allergens_R.forEach( function(allergen){
+
+    allergen.addEventListener("change", function filterAllergene(event){
+        let menucards = document.querySelectorAll(".split-right .menuCard");
         if (this.checked) {
             menucards.forEach(function(menucard){
                 let allergy = menucard.getAttribute("allergen");
@@ -76,7 +176,6 @@ allergens.forEach( function(allergen){
         }
     });
 });
-
 
 
 
