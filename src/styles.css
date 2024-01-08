@@ -1,6 +1,37 @@
+html {
+    height: 100%;
+}
+body {
+    margin: 10px;
+    overflow-y: hidden;
+}
 
+.split-container {
+    display: flex;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.split-left, .split-right {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+ /*
+.separator {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+     height: 100%; 
+    background-color: #000; 
+}
+*/
 .header {
-    padding: 5px;
+    padding: 0px;
     text-align: center;
     background: #1abc9c;
     color: white;
@@ -68,7 +99,7 @@ img {
 .menus {
     left: 0;
     width: 100%;
-    padding: 5px;
+    padding: 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -96,7 +127,6 @@ img {
 
 .footer {
     padding: 5px;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -104,6 +134,7 @@ img {
     color: white;
     text-align: center;
 }
+
 
 
 /* The sidebar menu */
