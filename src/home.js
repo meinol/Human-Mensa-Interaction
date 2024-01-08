@@ -46,11 +46,9 @@ var handlers = {
 function updateSplit(response) {
     if(response.split === "true"){
         document.querySelector('.split-right').style.display = 'block';
-        console.log("true");
     }
     else {
         document.querySelector('.split-right').style.display = 'none';
-        console.log("false");
     }
     
 }
@@ -101,7 +99,6 @@ function addSidebar(){
 
 function removeSidebar(){
     let sidebar = document.getElementById("sidebar");
-    document.querySelector('.split-right').style.display = "block";
     sidebar.style.display = "none";
 }
 
@@ -113,7 +110,6 @@ function addSidebar_r(){
 
 function removeSidebar_r(){
     let sidebar = document.getElementById("sidebar_r");
-    document.querySelector('.split-right').style.display = "none";
     sidebar.style.display = "none";
 }
 
