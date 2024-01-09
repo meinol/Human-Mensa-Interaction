@@ -125,6 +125,7 @@ allergens_L.forEach( function(allergen){
 
     allergen.addEventListener("change", function filterAllergene(event){
         let menucards = document.querySelectorAll(".split-left .menuCard");
+        let allergens = document.querySelectorAll(".split-left .container input");
         if (this.checked) {
             menucards.forEach(function(menucard){
                 let allergy = menucard.getAttribute("allergen");
@@ -142,8 +143,20 @@ allergens_L.forEach( function(allergen){
                     menucard.style.display = "block";
                 }
             });
-
+            allergens.forEach( function(a){
+                if (a.checked) {
+                    menucards.forEach(function(menucard){
+                        let allergy = menucard.getAttribute("allergen");
+    
+                        if(allergy.includes(a.id)){
+                            menucard.style.display = "none";
+                        }
+                    });
+                    console.log(a.id)
+                }
+            }); 
         }
+         
     });
     
 });
