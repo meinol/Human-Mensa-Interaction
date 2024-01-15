@@ -46,13 +46,13 @@ var handlers = {
 function updateSplit(response) {
     if(response.split === "true"){
         document.querySelector('.split-right').style.display = 'block';
-        document.getElementById('price').style.display = 'none';
-        document.getElementById('price_r').style.display = 'none';
+        document.getElementById('location-L').style.display = 'none';
+        document.getElementById('location-R').style.display = 'none';
     }
     else {
         document.querySelector('.split-right').style.display = 'none';
-        document.getElementById('price').style.display = 'block';
-        
+        document.getElementById('location-L').style.display = 'block';
+        document.getElementById('location-R').style.display = 'block';
     }
     
 }
@@ -119,6 +119,24 @@ function removeSidebar_r(){
 
 /* filter allergen */
 
+
+function allergenList(side){
+    var labels = document.querySelectorAll(side + " label.container ");
+    checkedAllergens = []
+    labels.forEach(function(label) {
+        var checkbox = label.querySelector('input[type="checkbox"]');
+        var labelText = label.textContent.trim();
+        console.log(checkbox);
+        if (checkbox.checked) {
+            console.log(labelText); 
+            checkedAllergens.push(labelText);
+        }
+    });
+    console.log(checkedAllergens)
+    return checkedAllergens.join(", ");
+}
+
+
 let allergens_L = document.querySelectorAll(".split-left .container input");
 
 allergens_L.forEach( function(allergen){
@@ -152,11 +170,19 @@ allergens_L.forEach( function(allergen){
                             menucard.style.display = "none";
                         }
                     });
-                    console.log(a.id)
                 }
             }); 
         }
-         
+        let aList = allergenList(".split-left");
+        let filter_display = document.getElementById("filter-display-L");
+        console.log(aList);
+        if (aList === ""){
+            filter_display.style.display = "none";
+        }
+        else {
+            filter_display.style.display = "block";
+            filter_display.innerText = "Ausgewählte Filter: " + aList;
+        }
     });
     
 });
@@ -198,6 +224,16 @@ allergens_R.forEach( function(allergen){
                     console.log(a.id)
                 }
             }); 
+        }
+        let aList = allergenList(".split-right");
+        let filter_display = document.getElementById("filter-display-R");
+        console.log(aList);
+        if (aList === ""){
+            filter_display.style.display = "none";
+        }
+        else {
+            filter_display.style.display = "block";
+            filter_display.innerText = "Ausgewählte Filter: " + aList;
         }
     });
 });

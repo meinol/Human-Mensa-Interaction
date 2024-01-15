@@ -50,26 +50,18 @@ body {
     justify-content: left;
 }
 
-.option-container {
-    display:flex;
-    flex-direction:column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-}
-
 .Options{
     display:flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .hOption{
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
 }
 
@@ -77,14 +69,18 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
 .filter-display{
-    margin-left: 15px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    font-size: 16px;
+    position: sticky;
+    top: 5px;
+    margin-top: 5px;
+    background-color: rgba(201, 59, 8, 0.836);
+    color: white;
+    padding-left: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     display: none;
 }
-
 
 .burgerMenu{
     left: 0;
@@ -104,15 +100,11 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
-    #price{
+  
+    #location-L{
         display: none;
     }
-
-    #weekday{
-        display: none;
-    }
-
-    #language{
+    #location-R{
         display: none;
     }
 }
@@ -157,13 +149,13 @@ img {
 
 .footer {
     padding: 5px;
-    left: 0;
     bottom: 0;
-    width: 100%;
     background-color: #1abc9c;
     color: white;
     text-align: center;
 }
+
+
 
 
 
