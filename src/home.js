@@ -75,24 +75,33 @@ menuCards.forEach(function(menuCard) {
         let img = document.querySelector("#" + targetElement.id + " img");
         let description = document.querySelector("#" + targetElement.id + " .description");
 
-        let values = "Nährwertangaben:\n\nBrennwert:\t1000kcal\nKohlenhydrate:\t23g\nZucker:\t10g\nEiweiß:\t20g\nSalz:\t20g\nFett:\t5g\n";
-
+        let valuesDE = "Nährwertangaben:\n\nBrennwert:\t1000kcal\nKohlenhydrate:\t23g\nZucker:\t10g\nEiweiß:\t20g\nSalz:\t20g\nFett:\t5g\n";
+        let valuesEN = "Nutritional values:\n\nCalories:\t1000kcal\nCarbohydrates:\t23g\nSugar:\t10g\nProtein:\t20g\nSalt:\t20g\nFat:\t5g\n";
         if( window.getComputedStyle(img).display !== "none"){
 
             img.style.display = "none";
 
-            const p = document.createElement('p');
-            p.innerText = values;
+            const pDE = document.createElement('p');
+            pDE.lang = "de";
+            pDE.innerText = valuesDE;
+
+            const pEN = document.createElement('p');
+            pEN.lang = "en";
+            pEN.innerText = valuesEN;
             //card.appendChild(p);
-            card.prepend(p);
+            card.prepend(pDE);
+            card.prepend(pEN);
             description.style.whiteSpace = "wrap";
 
         }else{
             img.style.display = "block";
             description.style.whiteSpace = "nowrap";
-            const p =  document.querySelector("#" + targetElement.id + " p");
-            p.remove();
+            const ps =  document.querySelectorAll("#" + targetElement.id + " p");
+            ps.forEach((p) => p.remove())
         }
+
+        //reload language since card back side was not there yet
+        selectLanguage();
     });
 });
 
@@ -322,6 +331,20 @@ function closeAllSelect(elmnt) {
         }
     }
 }
+
+document.getElementById("language").onclick = selectLanguage;
+
+function selectLanguage() {
+    let lang = document.getElementById("language-select").value;
+    if(lang === "1") lang = "de";
+
+    console.log("Language selected:" +  lang);
+    document.querySelectorAll("[lang='en']").forEach((element) => element.style.display = 'none');
+    document.querySelectorAll("[lang='de']").forEach((element) => element.style.display = 'none');
+    document.querySelectorAll("[lang='" + lang + "']").forEach((element) => element.style.display = 'block');
+}
+
+selectLanguage();
 
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
