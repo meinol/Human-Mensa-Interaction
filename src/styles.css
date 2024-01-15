@@ -1,5 +1,5 @@
 * {
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 html {
@@ -46,10 +46,17 @@ body {
     font-size: 20px;
     display:flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: flex-start;
     justify-content: left;
 }
 
+.option-container {
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
 
 .Options{
     display:flex;
@@ -57,15 +64,27 @@ body {
     align-items: baseline;
     justify-content: center;
     width: 100%;
+    margin-top: 10px;
 }
 
 .hOption{
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
     text-align: center;
 }
+
+.hOption h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.filter-display{
+    margin-left: 15px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 16px;
+    display: none;
+}
+
 
 .burgerMenu{
     left: 0;
@@ -75,10 +94,13 @@ body {
     min-width: 50px;
     border-radius: 5px;
     background-color: darkcyan;
+    margin: 15px;
 }
+
+
 .sidenav .burgerMenu {
-    margin-top: 29px;
-    margin-left: 25px;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -155,8 +177,8 @@ img {
     background: #81b9b9;
     overflow-x: hidden; /* Disable horizontal scroll */
     position: absolute;
-    margin-left: 8px;
-    margin-top:  8px;
+    margin: 10px;
+    
     display: none;
 }
 
@@ -185,9 +207,25 @@ img {
 }
 
 .stairs{
-    background-color: darkslateblue;
     padding: 2px 5px 2px 5px;
     color: white;
+    border-radius: 3px;
+}
+
+.stairs.A{
+    background-color: darkslateblue;
+}
+
+.stairs.B{
+    background-color: rgb(30, 139, 45);
+}
+
+.stairs.C{
+    background-color: rgb(207, 172, 14);
+}
+
+.stairs.D{
+    background-color: rgb(209, 70, 15);
 }
 
 .navMenu {
@@ -215,7 +253,8 @@ img {
 .custom-select {
     position: relative;
     font-family: Arial;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .custom-select select {
