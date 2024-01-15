@@ -75,7 +75,7 @@ menuCards.forEach(function(menuCard) {
         let img = document.querySelector("#" + targetElement.id + " img");
         let description = document.querySelector("#" + targetElement.id + " .description");
 
-        let values = "Kohlenhydrate:  1000kcal \n Zucker: 10g \n Salz: 20g \n Fett: 5g";
+        let values = "Nährwertangaben:\n\nBrennwert:\t1000kcal\nKohlenhydrate:\t23g\nZucker:\t10g\nEiweiß:\t20g\nSalz:\t20g\nFett:\t5g\n";
 
         if( window.getComputedStyle(img).display !== "none"){
 
@@ -83,7 +83,8 @@ menuCards.forEach(function(menuCard) {
 
             const p = document.createElement('p');
             p.innerText = values;
-            card.appendChild(p);
+            //card.appendChild(p);
+            card.prepend(p);
             description.style.whiteSpace = "wrap";
 
         }else{
@@ -231,6 +232,7 @@ allergens_R.forEach( function(allergen){
         if (aList === ""){
             filter_display.style.display = "none";
         }
+
         else {
             filter_display.style.display = "block";
             filter_display.innerText = "Ausgewählte Filter: " + aList;
