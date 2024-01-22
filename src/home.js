@@ -88,7 +88,7 @@ menuCards.forEach(function(menuCard) {
             const pEN = document.createElement('p');
             pEN.lang = "en";
             pEN.innerText = valuesEN;
-            //card.appendChild(p);
+
             card.prepend(pDE);
             card.prepend(pEN);
             description.style.whiteSpace = "wrap";
@@ -102,6 +102,7 @@ menuCards.forEach(function(menuCard) {
 
         //reload language since card back side was not there yet
         selectLanguage();
+        selectLanguageRight();
     });
 });
 
@@ -332,19 +333,32 @@ function closeAllSelect(elmnt) {
     }
 }
 
-document.getElementById("language").onclick = selectLanguage;
+document.getElementById("language-L").onclick = selectLanguage;
 
 function selectLanguage() {
-    let lang = document.getElementById("language-select").value;
+    let lang = document.getElementById("language-select-L").value;
     if(lang === "1") lang = "de";
 
-    console.log("Language selected:" +  lang);
-    document.querySelectorAll("[lang='en']").forEach((element) => element.style.display = 'none');
-    document.querySelectorAll("[lang='de']").forEach((element) => element.style.display = 'none');
-    document.querySelectorAll("[lang='" + lang + "']").forEach((element) => element.style.display = 'block');
+    console.log("Language left selected:" +  lang);
+    document.querySelectorAll(".split-left [lang='en']").forEach((element) => element.style.display = 'none');
+    document.querySelectorAll(".split-left [lang='de']").forEach((element) => element.style.display = 'none');
+    document.querySelectorAll(".split-left [lang='" + lang + "']").forEach((element) => element.style.display = 'block');
 }
 
 selectLanguage();
+
+document.getElementById("language-R").onclick = selectLanguageRight;
+function selectLanguageRight() {
+    let lang = document.getElementById("language-select-R").value;
+    if(lang === "1") lang = "de";
+
+    console.log("Language right selected:" +  lang);
+    document.querySelectorAll(".split-right [lang='en']").forEach((element) => element.style.display = 'none');
+    document.querySelectorAll(".split-right [lang='de']").forEach((element) => element.style.display = 'none');
+    document.querySelectorAll(".split-right [lang='" + lang + "']").forEach((element) => element.style.display = 'block');
+}
+
+selectLanguageRight();
 
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */

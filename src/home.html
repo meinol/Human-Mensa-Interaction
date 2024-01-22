@@ -26,8 +26,8 @@
                             <span lang="de">Kontostand: </span><span lang="en">Balance: </span> 17.99 €
                         </div>
 
-                        <div id="language" class="custom-select" style="width:200px;">
-                            <select id="language-select">
+                        <div id="language-L" class="custom-select" style="width:200px;">
+                            <select id="language-select-L">
                                 <option value="1">Language</option>
                                 <option value="de">Deutsch</option>
                                 <option value="en">English</option>
@@ -257,26 +257,24 @@
 <!-- ########################################################################## Ab hier rechte Seite ########################################################################## -->
 
         <div class="split-right">
-            
-        <div class="header">
+            <div class="header">
 
-            <div class="burgerMenu hOption" id="burger1_r">
-                <img src="images/hamburgerIcon.png">
-            </div>
+                <div class="burgerMenu hOption" id="burger1_r">
+                    <img src="images/hamburgerIcon.png">
+                </div>
 
-        
                 <div class="Options">
 
                     <div id="location-R" class="hOption">
-                        <h1>Mensa: Contine</h1>
+                        <h1><span lang="de">Mensa: </span><span lang="en">Cantine: </span>Contine</h1>
                     </div>
 
                     <div id="price-R" class="hOption">
-                        Kontostand: 17.99 €
+                        <span lang="de">Kontostand: </span><span lang="en">Balance: </span> 17.99 €
                     </div>
 
-                    <div id="language" class="custom-select" style="width:200px;">
-                        <select id="language-select">
+                    <div id="language-R" class="custom-select" style="width:200px;">
+                        <select id="language-select-R">
                             <option value="1">Language</option>
                             <option value="de">Deutsch</option>
                             <option value="en">English</option>
@@ -296,202 +294,209 @@
                     </div>
 
                 </div>
-               
-           
-        </div>
-
-        <div class="filter-display" id="filter-display-R">
-        </div>
-
-        <div class="sidenav" id="sidebar_r">
-            <div class="burgerMenu hOption" id="burger2_r">
-                <img src="images/hamburgerIcon.png">
-            </div>
-
-            <div class="navMenu">
-                <div >Filter für Allergien:</div>
-
-                <div id="Allergene">
-
-                    <label class="container">Krustentiere
-                        <input id="krustentiere" type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="container">Nüsse
-                        <input id="nuesse" type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="container">Gluten
-                        <input id="gluten" type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="container"> Tomaten
-                        <input id="tomaten" type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-
-                <div >Vegetarisch/Vegan:</div>
-
-                <div id="veggie">
-
-                    <label class="container">Vegetarisch
-                        <input id="vegetarisch" type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="container"> Vegan
-                        <input id="vegan" type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-
-                <div >Mehr Optionen</div>
-            </div>
-        </div>
-
-        <div class="content">
-
-            <div class="menus">
-
-                <div class="menuCard" id="seelachs_r" allergen="tomaten,vegetarisch,vegan">
-                    <img src="images/seelachs.png">
-                    <div class="description"> Seelachs mit Kartoffel, Tomaten und Rosmarin </div>
-
-                    <div class="infos">
-                    <div class="stairs A"> Aufgang A </div>
-                    <div class="price">3.00€ </div>
-                    </div>
-                </div>
-
-                <div class="menuCard" id="salat_r" allergen="tomaten,nuesse,krustentiere,vegetarisch,vegan">
-                    <img src="images/salat.png">
-                    <div class="description"> Salat mit Garnelen, Tomaten und Avocado</div>
-
-                    <div class="infos">
-                    <div class="stairs A"> Aufgang A </div>
-                    <div class="price">3.60€ </div>
-                    </div>
-                </div>
-
-                <div class="menuCard" id="baguette_r" allergen="tomaten,vegetarisch,vegan,gluten">
-                    <img src="images/sandwitch.png">
-                    <div class="description"> belegtes Baguette mit Bacon</div>
-
-                    <div class="infos">
-                    <div class="stairs A"> Aufgang A </div>
-                    <div class="price">2.50€ </div>
-                    </div>
-                </div>
-
-                <div class="menuCard" id="torte_r" allergen="nuesse,vegan,gluten">
-                    <img src="images/dessert.png">
-                    <div class="description"> Törtchen mit Schokolade</div>
-
-                    <div class="infos">
-                    <div class="stairs A"> Aufgang A </div>
-                    <div class="price">1.00€ </div>
-                    </div>
-                </div>
-
-
-
-                <div class="menuCard" id="curry_r" allergen="vegetarisch,vegan">
-                    <img src="images/curry.png">
-                    <div class="description"> Curry mit Reis</div>
-
-                    <div class="infos">
-                    <div class="stairs B"> Aufgang B </div>
-                    <div class="price">2.50€ </div>
-                    </div>
-                </div>
-
-                
-                <div class="menuCard" id="donut_r" allergen="vegan,gluten">
-                    <img src="images/donut.png">
-                    <div class="description"> Schokoladendonut</div>
-
-                    <div class="infos">
-                    <div class="stairs B"> Aufgang B </div>
-                    <div class="price">1.00€ </div>
-                    </div>
-                </div>
-
-                <div class="menuCard" id="pizza_r" allergen="tomaten,vegan,gluten">
-                    <img src="images/pizza.png">
-                    <div class="description"> Pizza Tomate Mozzarella</div>
-
-                    <div class="infos">
-                    <div class="stairs C"> Aufgang C </div>
-                    <div class="price"> 5.00€ </div>
-                    </div>
-                </div>
-
-                <div class="menuCard" id="schokokuss_r" allergen="vegan,gluten">
-                    <img src="images/schokokuss.png">
-                    <div class="description"> Schokokussbrötchen</div>
-
-                    <div class="infos">
-                    <div class="stairs C"> Aufgang C </div>
-                    <div class="price">1.00€ </div>
-                    </div>
-                </div>
-
-                <div class="menuCard" id="veganpatty_r" allergen="tomaten,gluten">
-                    <img src="images/veganpatty.png">
-                    <div class="description"> Veganpatty mit Linsen und Tomate</div>
-
-                    <div class="infos">
-                    <div class="stairs D"> Aufgang D </div>
-                    <div class="price">2.80€ </div>
-                    </div>
-
-                </div>
-
-                <div class="menuCard" id="apfelschorle_r" allergen="">
-                    <img src="images/apfelschorle.png">
-                    <div class="description"> Apfelschorle</div>
-
-                    <div class="infos">
-                    <div class="stairs D"> Aufgang D </div>
-                    <div class="price">2.50€ </div>
-                    </div>
-                </div>
-
-                <div class="menuCard" id="schokolade_r" allergen="vegan">
-                    <img src="images/kakao.png">
-                    <div class="description"> heiße Schokolade</div>
-
-                    <div class="infos">
-                    <div class="stairs D"> Aufgang D </div>
-                    <div class="price">2.00€ </div>
-                    </div>
-                </div>
-
-                <div class="menuCard" id="kaffee_r" allergen="">
-                    <img src="images/espresso.png">
-                    <div class="description"> Espresso</div>
-
-                    <div class="infos">
-                    <div class="stairs D"> Aufgang D </div>
-                    <div class="price">1.60€ </div>
-                    </div>
-                </div>
-
 
             </div>
+            <div class="filter-display" id="filter-display-R">
+            </div>
+            <div class="sidenav" id="sidebar_r">
+                <div class="burgerMenu hOption" id="burger2_r">
+                    <img src="images/hamburgerIcon.png">
+                </div>
+
+                <div class="navMenu">
+                    <div><span lang="de">Filter für Allergien:</span><span lang="en">Allergy filters:</span></div>
+
+                    <div id="Allergene">
+
+                        <label class="container"><span lang="de">Krustentiere</span><span lang="en">Shell</span>
+                            <input id="krustentiere" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container"><span lang="de">Nüsse</span><span lang="en">Nuts</span>
+                            <input id="nuesse" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container"><span lang="de">Gluten</span><span lang="en">Gluten</span>
+                            <input id="gluten" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container"><span lang="de">Tomaten</span><span lang="en">Tomatoes</span>
+                            <input id="tomaten" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <div ><span lang="de">Vegetarisch/Vegan:</span><span lang="en">Vegetarian/Vegan:</span></div>
+
+                    <div id="veggie">
+
+                        <label class="container"><span lang="de">Vegetarisch</span><span lang="en">Vegetarian</span>
+                            <input id="vegetarisch" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container"><span lang="de">Vegan</span><span lang="en">Vegan</span>
+                            <input id="vegan" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <div ><span lang="de">Mehr Optionen:</span><span lang="en">More options:</span></div>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <div class="menus">
+
+                    <div class="menuCard" id="seelachs_r" allergen="tomaten,vegetarisch,vegan">
+                        <img src="images/seelachs.png">
+                        <div class="description"> <span lang="de">Seelachs mit Kartoffel, Tomaten und Rosmarin</span>
+                            <span lang="en">Salmon with potatoes, tomatoes and rosemary</span> </div>
+
+                        <div class="infos">
+                            <div class="stairs A"> <span lang="de">Aufgang A</span><span lang="en">Stairs A</span> </div>
+                            <div class="price">3.00€ </div>
+                        </div>
+                    </div>
+
+                    <div class="menuCard" id="salat_r" allergen="tomaten,nuesse,krustentiere,vegetarisch,vegan">
+                        <img src="images/salat.png">
+                        <div class="description"><span lang="de">Salat mit Garnelen, Tomaten und Avocado</span>
+                            <span lang="en">Salad with shrimps, tomatoes and avocado</span></div>
+
+                        <div class="infos">
+                            <div class="stairs A"> <span lang="de">Aufgang A</span><span lang="en">Stairs A</span> </div>
+                            <div class="price">3.60€ </div>
+                        </div>
+                    </div>
+
+                    <div class="menuCard" id="baguette_r" allergen="tomaten,vegetarisch,vegan,gluten">
+                        <img src="images/sandwitch.png">
+                        <div class="description"> <span lang="de">belegtes Baguette mit Bacon</span>
+                            <span lang="en">Baguette with bacon</span></div>
+
+                        <div class="infos">
+                            <div class="stairs A"> <span lang="de">Aufgang A</span><span lang="en">Stairs A</span> </div>
+                            <div class="price">2.50€ </div>
+                        </div>
+                    </div>
+
+                    <div class="menuCard" id="torte_r" allergen="nuesse,vegan,gluten">
+                        <img src="images/dessert.png">
+                        <div class="description"> <span lang="de">Törtchen mit Schokolade</span>
+                            <span lang="en">Chocolate cake</span></div>
+
+                        <div class="infos">
+                            <div class="stairs A"> <span lang="de">Aufgang A</span><span lang="en">Stairs A</span> </div>
+                            <div class="price">1.00€ </div>
+                        </div>
+                    </div>
 
 
-        </div>
-        
-        <div class="footer">
+
+                    <div class="menuCard" id="curry_r" allergen="vegetarisch,vegan">
+                        <img src="images/curry.png">
+                        <div class="description"> <span lang="de">Curry mit Reis</span>
+                            <span lang="en">Curry with rice</span></div>
+
+                        <div class="infos">
+                            <div class="stairs B"> <span lang="de">Aufgang B</span><span lang="en">Stairs B</span> </div>
+                            <div class="price">2.50€ </div>
+                        </div>
+                    </div>
+
+
+                    <div class="menuCard" id="donut_r" allergen="vegan,gluten">
+                        <img src="images/donut.png">
+                        <div class="description"> <span lang="de">Schokoladendonut</span>
+                            <span lang="en">Chocholate donut</span></div>
+
+                        <div class="infos">
+                            <div class="stairs B"> <span lang="de">Aufgang B</span><span lang="en">Stairs B</span> </div>
+                            <div class="price">1.00€ </div>
+                        </div>
+                    </div>
+
+                    <div class="menuCard" id="pizza_r" allergen="tomaten,vegan,gluten">
+                        <img src="images/pizza.png">
+                        <div class="description"><span lang="de">Pizza Tomate Mozzarella</span>
+                            <span lang="en">Neapolitan pizza</span></div>
+
+                        <div class="infos">
+                            <div class="stairs C"> <span lang="de">Aufgang C</span><span lang="en">Stairs C</span> </div>
+                            <div class="price"> 5.00€ </div>
+                        </div>
+                    </div>
+
+                    <div class="menuCard" id="schokokuss_r" allergen="vegan,gluten">
+                        <img src="images/schokokuss.png">
+                        <div class="description"> Schokokussbrötchen </div>
+
+                        <div class="infos">
+                            <div class="stairs C"> <span lang="de">Aufgang C</span><span lang="en">Stairs C</span> </div>
+                            <div class="price">1.00€ </div>
+                        </div>
+                    </div>
+
+                    <div class="menuCard" id="veganpatty_r" allergen="tomaten,gluten">
+                        <img src="images/veganpatty.png">
+                        <div class="description"> <span lang="de">Veganpatty mit Linsen und Tomate</span>
+                            <span lang="en">Vegan patty with lentils and tomatoe</span></div>
+
+                        <div class="infos">
+                            <div class="stairs D"> <span lang="de">Aufgang D</span><span lang="en">Stairs D</span> </div>
+                            <div class="price">2.80€ </div>
+                        </div>
+
+                    </div>
+
+                    <div class="menuCard" id="apfelschorle_r" allergen="">
+                        <img src="images/apfelschorle.png">
+                        <div class="description"> <span lang="de">Apfelschorle</span>
+                            <span lang="en">Apple lemonade</span></div>
+
+                        <div class="infos">
+                            <div class="stairs D"> <span lang="de">Aufgang D</span><span lang="en">Stairs D</span> </div>
+                            <div class="price">2.50€ </div>
+                        </div>
+                    </div>
+
+                    <div class="menuCard" id="schokolade_r" allergen="vegan">
+                        <img src="images/kakao.png">
+                        <div class="description"> <span lang="de">heiße Schokolade</span>
+                            <span lang="en">Hot chocholate</span></div>
+
+                        <div class="infos">
+                            <div class="stairs D"> <span lang="de">Aufgang D</span><span lang="en">Stairs D</span> </div>
+                            <div class="price">2.00€ </div>
+                        </div>
+                    </div>
+
+                    <div class="menuCard" id="kaffee_r" allergen="">
+                        <img src="images/espresso.png">
+                        <div class="description"> <span lang="de">Espresso</span>
+                            <span lang="en">Espresso</span></div>
+
+                        <div class="infos">
+                            <div class="stairs D"> <span lang="de">Aufgang D</span><span lang="en">Stairs D</span> </div>
+                            <div class="price">1.60€ </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer">
                 <p> Projekt: HMI</p>
-        </div>
-
-
+            </div>
         </div>
     </div>
 </body>
