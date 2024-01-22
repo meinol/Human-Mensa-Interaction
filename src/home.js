@@ -133,10 +133,14 @@ function removeSidebar_r(){
 
 function allergenList(side){
     var labels = document.querySelectorAll(side + " label.container ");
+    let lang = document.querySelector(side + " .language-selector").value;
+    if(lang === "1") lang = "de";
+
+    console.log("Language: ", lang);
     checkedAllergens = []
     labels.forEach(function(label) {
         var checkbox = label.querySelector('input[type="checkbox"]');
-        var labelText = label.textContent.trim();
+        var labelText = label.querySelector('[lang="' + lang + '"]').textContent.trim();
         console.log(checkbox);
         if (checkbox.checked) {
             console.log(labelText); 
@@ -144,7 +148,10 @@ function allergenList(side){
         }
     });
     console.log(checkedAllergens)
-    return checkedAllergens.join(", ");
+    selectText = "Ausgewählte Filter: ";
+    if (lang === "en") selectText = "Selected filters: ";
+    if (checkedAllergens.length === 0) selectText = "";
+    return selectText + checkedAllergens.join(", ");
 }
 
 
@@ -192,7 +199,7 @@ allergens_L.forEach( function(allergen){
         }
         else {
             filter_display.style.display = "block";
-            filter_display.innerText = "Ausgewählte Filter: " + aList;
+            filter_display.innerText =  aList;
         }
     });
     
@@ -245,7 +252,7 @@ allergens_R.forEach( function(allergen){
 
         else {
             filter_display.style.display = "block";
-            filter_display.innerText = "Ausgewählte Filter: " + aList;
+            filter_display.innerText = aList;
         }
     });
 });
